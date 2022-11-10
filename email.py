@@ -1,11 +1,11 @@
 import re
 
-email1 = "ostap.komar7@gmail.com"
-email2 = "ostap.@gmail.com"
-email3 = "ostap%gmail.com"
-email4 = "ostap@gmail.net"
+email1 = "pawel.rubach@sgh.waw.pl"
+email2 = "pawel.rubach@sghwaw,pl"
+email3 = "@sgh.waw.pl"
+email4 = "pawel@"
 email5 = ""
-email6 = "ostap.komar"
+email6 = "pawel@.pl"
 
 emails = [email1, email2, email3, email4, email5, email6]
 
@@ -17,13 +17,12 @@ def check_email(email):
     if re.match("^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@gmail.com$", email):
         print(email, end=" - ")
 
-    if email[-3:-1] == "com":
+    if email[-3:-1] == ".pl":
         print("OK", end=" - ")
 
-    if email[:5] == "ostap":
+    if email[:5] == "pawel":
         print("OK")
 
-    return True
 
 
 
